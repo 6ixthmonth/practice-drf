@@ -5,3 +5,8 @@ urlpatterns = [
     path('snippets/', views.snippet_list),
     path('snippets/<int:pk>/', views.snippet_detail),
 ]
+
+
+from rest_framework.urlpatterns import format_suffix_patterns
+
+urlpatterns = format_suffix_patterns(urlpatterns)
