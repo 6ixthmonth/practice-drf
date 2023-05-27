@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from snippets import views
 
 urlpatterns = [
@@ -14,3 +14,7 @@ urlpatterns = [
 from rest_framework.urlpatterns import format_suffix_patterns
 
 urlpatterns = format_suffix_patterns(urlpatterns)
+
+urlpatterns += [
+    path('api-auth/', include('rest_framework.urls')),
+]
