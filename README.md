@@ -1,1 +1,1 @@
-# drf-exercise
+# practice-drf
